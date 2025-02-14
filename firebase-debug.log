@@ -1,0 +1,785 @@
+[debug] [2025-02-14T16:50:04.671Z] ----------------------------------------------------------------------
+[debug] [2025-02-14T16:50:04.675Z] Command:       /usr/local/bin/node /Users/gavinbrown/.npm-global/bin/firebase deploy --only functions
+[debug] [2025-02-14T16:50:04.676Z] CLI Version:   13.30.0
+[debug] [2025-02-14T16:50:04.676Z] Platform:      darwin
+[debug] [2025-02-14T16:50:04.676Z] Node Version:  v22.13.1
+[debug] [2025-02-14T16:50:04.676Z] Time:          Fri Feb 14 2025 09:50:04 GMT-0700 (Mountain Standard Time)
+[debug] [2025-02-14T16:50:04.677Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-14T16:50:04.920Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-14T16:50:04.921Z] > authorizing via signed-in user (gavinwaynebrown@gmail.com)
+[debug] [2025-02-14T16:50:04.921Z] [iam] checking project fnof-gavin for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-02-14T16:50:04.922Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:04.922Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:04.923Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions [none]
+[debug] [2025-02-14T16:50:04.923Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:04.924Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-02-14T16:50:05.287Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions 200
+[debug] [2025-02-14T16:50:05.288Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-02-14T16:50:05.288Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.289Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.289Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-02-14T16:50:05.289Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-02-14T16:50:05.495Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-02-14T16:50:05.495Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'fnof-gavin'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-02-14T16:50:05.498Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.498Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.498Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin [none]
+[debug] [2025-02-14T16:50:05.593Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin 200
+[debug] [2025-02-14T16:50:05.593Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin {"projectNumber":"1072546484082","projectId":"fnof-gavin","lifecycleState":"ACTIVE","name":"FNoF-Gavin","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-01-27T16:28:24.202641Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:05.595Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.595Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.595Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.595Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:05.595Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.595Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:05.596Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.596Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:05.596Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-02-14T16:50:05.596Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:05.597Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-02-14T16:50:05.597Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:05.598Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com [none]
+[debug] [2025-02-14T16:50:05.599Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:05.600Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com [none]
+[debug] [2025-02-14T16:50:05.600Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:05.979Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com 200
+[debug] [2025-02-14T16:50:05.979Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-02-14T16:50:06.128Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com 200
+[debug] [2025-02-14T16:50:06.128Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-02-14T16:50:06.136Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com 200
+[debug] [2025-02-14T16:50:06.136Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-02-14T16:50:06.142Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com 200
+[debug] [2025-02-14T16:50:06.142Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-02-14T16:50:06.143Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:06.143Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:06.143Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fnof-gavin/adminSdkConfig [none]
+[debug] [2025-02-14T16:50:06.354Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fnof-gavin/adminSdkConfig 200
+[debug] [2025-02-14T16:50:06.354Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fnof-gavin/adminSdkConfig {"projectId":"fnof-gavin","storageBucket":"fnof-gavin.firebasestorage.app"}
+[debug] [2025-02-14T16:50:06.356Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:06.356Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:06.357Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fnof-gavin/configs [none]
+[debug] [2025-02-14T16:50:06.532Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fnof-gavin/configs 200
+[debug] [2025-02-14T16:50:06.532Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fnof-gavin/configs {}
+[debug] [2025-02-14T16:50:06.542Z] Validating nodejs source
+[debug] [2025-02-14T16:50:08.156Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.3.2"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-02-14T16:50:08.157Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-02-14T16:50:08.158Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-02-14T16:50:08.170Z] Found firebase-functions binary at '/Users/gavinbrown/Documents/WebApp/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8558
+
+[debug] [2025-02-14T16:50:09.091Z] Got response from /__/functions.yaml {"endpoints":{"scheduledRun":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"scheduleTrigger":{"schedule":"every day 20:00","retryConfig":{"retryCount":null,"maxDoublings":null,"maxRetrySeconds":null,"minBackoffSeconds":null,"maxBackoffSeconds":null},"timeZone":null},"entryPoint":"scheduledRun"}},"specVersion":"v1alpha1","requiredAPIs":[{"api":"cloudscheduler.googleapis.com","reason":"Needed for scheduled functions."}],"extensions":{}}
+[info] [{"speciesCode":"gretit1","comName":"Great Tit","sciName":"Parus major","locId":"L9840246","locName":"Shybynsay","obsDt":"2025-02-14 16:12","howMany":12,"lat":43.198302,"lng":77.040023,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213181130"},{"speciesCode":"eurbla","comName":"Eurasian Blackbird","sciName":"Turdus merula","locId":"L9840246","locName":"Shybynsay","obsDt":"2025-02-14 16:12","howMany":1,"lat":43.198302,"lng":77.040023,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213181130"},{"speciesCode":"azutit2","comName":"Azure Tit","sciName":"Cyanistes cyanus","locId":"L9840246","locName":"Shybynsay","obsDt":"2025-02-14 16:12","howMany":2,"lat":43.198302,"lng":77.040023,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213181130"},{"speciesCode":"datthr1","comName":"Black-throated Thrush","sciName":"Turdus atrogularis","locId":"L9840246","locName":"Shybynsay","obsDt":"2025-02-14 16:12","howMany":4,"lat":43.198302,"lng":77.040023,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213181130"},{"speciesCode":"eurgol2","comName":"Gray-crowned Goldfinch","sciName":"Carduelis caniceps","locId":"L9840246","locName":"Shybynsay","obsDt":"2025-02-14 16:12","howMany":10,"lat":43.198302,"lng":77.040023,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213181130"},{"speciesCode":"eurmag1","comName":"Eurasian Magpie","sciName":"Pica pica","locId":"L9840246","locName":"Shybynsay","obsDt":"2025-02-14 16:12","howMany":4,"lat":43.198302,"lng":77.040023,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213181130"},{"speciesCode":"brambl","comName":"Brambling","sciName":"Fringilla montifringilla","locId":"L9840246","locName":"Shybynsay","obsDt":"2025-02-14 16:12","howMany":2,"lat":43.198302,"lng":77.040023,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213181130"},{"speciesCode":"rocpig","comName":"Rock Pigeon","sciName":"Columba livia","locId":"L10469106","locName":"KZ-Almaty-Chundzha (43.5288,79.4623)","obsDt":"2025-02-14 11:42","howMany":1,"lat":43.528777,"lng":79.462334,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213168402","exoticCategory":"N"},{"speciesCode":"eucdov","comName":"Eurasian Collared-Dove","sciName":"Streptopelia decaocto","locId":"L10469106","locName":"KZ-Almaty-Chundzha (43.5288,79.4623)","obsDt":"2025-02-14 11:42","howMany":1,"lat":43.528777,"lng":79.462334,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213168402"},{"speciesCode":"fieldf","comName":"Fieldfare","sciName":"Turdus pilaris","locId":"L10469106","locName":"KZ-Almaty-Chundzha (43.5288,79.4623)","obsDt":"2025-02-14 11:42","howMany":8,"lat":43.528777,"lng":79.462334,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213168402"},{"speciesCode":"eutspa","comName":"Eurasian Tree Sparrow","sciName":"Passer montanus","locId":"L10469106","locName":"KZ-Almaty-Chundzha (43.5288,79.4623)","obsDt":"2025-02-14 11:42","howMany":1,"lat":43.528777,"lng":79.462334,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213168402"},{"speciesCode":"hoocro1","comName":"Hooded Crow","sciName":"Corvus cornix","locId":"L10469106","locName":"KZ-Almaty-Chundzha (43.5288,79.4623)","obsDt":"2025-02-14 11:42","howMany":7,"lat":43.528777,"lng":79.462334,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213168402"},{"speciesCode":"rudshe","comName":"Ruddy Shelduck","sciName":"Tadorna ferruginea","locId":"L10469106","locName":"KZ-Almaty-Chundzha (43.5288,79.4623)","obsDt":"2025-02-14 11:42","howMany":2,"lat":43.528777,"lng":79.462334,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213168402"},{"speciesCode":"sheowl","comName":"Short-eared Owl","sciName":"Asio flammeus","locId":"L8920801","locName":"Sheikh Khalifa Houbara Breeding Center (restricted access)","obsDt":"2025-02-13 17:56","howMany":1,"lat":42.9784629,"lng":69.513792,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S213074450"},{"speciesCode":"whteag","comName":"White-tailed Eagle","sciName":"Haliaeetus albicilla","locId":"L37586849","locName":"Auto selected 44.14360, 73.71034","obsDt":"2025-02-13 11:33","howMany":1,"lat":44.143604,"lng":73.710336,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213053621"},{"speciesCode":"whwwoo1","comName":"White-winged Woodpecker","sciName":"Dendrocopos leucopterus","locId":"L40193327","locName":"улица Тохтыбакиева Добун","obsDt":"2025-02-13 10:15","howMany":2,"lat":43.694309,"lng":80.069216,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213098309"},{"speciesCode":"blalar1","comName":"Black Lark","sciName":"Melanocorypha yeltoniensis","locId":"L40184720","locName":"Auto selected 44.55280, 73.79134","obsDt":"2025-02-13 08:18","howMany":5,"lat":44.5528,"lng":73.79134,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213053631"},{"speciesCode":"crelar1","comName":"Crested Lark","sciName":"Galerida cristata","locId":"L27416045","locName":"Неизвестная дорога, Мирный (Мойынкумский р-н), Жамбыл, KZ (44,669, 73,856)","obsDt":"2025-02-13 07:55","howMany":1,"lat":44.6688356,"lng":73.8559187,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S213045559"},{"speciesCode":"eurkes","comName":"Eurasian Kestrel","sciName":"Falco tinnunculus","locId":"L40167180","locName":"Auto selected 44.67423, 73.77432","obsDt":"2025-02-12 16:16","howMany":1,"lat":44.674228,"lng":73.774319,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212958956"},{"speciesCode":"whwlar1","comName":"White-winged Lark","sciName":"Alauda leucoptera","locId":"L40167187","locName":"Auto selected 44.73800, 73.48668","obsDt":"2025-02-12 15:48","howMany":1,"lat":44.737999,"lng":73.486678,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212958977"},{"speciesCode":"grecor","comName":"Great Cormorant","sciName":"Phalacrocorax carbo","locId":"L8433050","locName":"Starikova Pond","obsDt":"2025-02-12 11:45","howMany":1,"lat":43.5303491,"lng":79.4624284,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212944843"},{"speciesCode":"litgre1","comName":"Little Grebe","sciName":"Tachybaptus ruficollis","locId":"L8433050","locName":"Starikova Pond","obsDt":"2025-02-12 11:45","howMany":1,"lat":43.5303491,"lng":79.4624284,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212944843"},{"speciesCode":"greegr","comName":"Great Egret","sciName":"Ardea alba","locId":"L8433050","locName":"Starikova Pond","obsDt":"2025-02-12 11:45","howMany":1,"lat":43.5303491,"lng":79.4624284,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212944843"},{"speciesCode":"graher1","comName":"Gray Heron","sciName":"Ardea cinerea","locId":"L8433050","locName":"Starikova Pond","obsDt":"2025-02-12 11:45","howMany":1,"lat":43.5303491,"lng":79.4624284,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212944843"},{"speciesCode":"litowl1","comName":"Little Owl","sciName":"Athene noctua","locId":"L40167208","locName":"Auto selected 44.66730, 73.78251","obsDt":"2025-02-12 08:32","howMany":1,"lat":44.667303,"lng":73.782515,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212959094"},{"speciesCode":"winwre4","comName":"Eurasian Wren","sciName":"Troglodytes troglodytes","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":2,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"bkhgul","comName":"Black-headed Gull","sciName":"Chroicocephalus ridibundus","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":20,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"blared1","comName":"Black Redstart","sciName":"Phoenicurus ochruros","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":1,"lat":43.6387121,"lng":51.1524502,"obsValid":tr
+[info] ue,"obsReviewed":true,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"blueth","comName":"Bluethroat","sciName":"Luscinia svecica","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":1,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"casgul2","comName":"Caspian Gull","sciName":"Larus cachinnans","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":30,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"cetwar1","comName":"Cetti's Warbler","sciName":"Cettia cetti","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":1,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"dunnoc1","comName":"Dunnock","sciName":"Prunella modularis","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":1,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"eargre","comName":"Eared Grebe","sciName":"Podiceps nigricollis","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":2,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"eurrob1","comName":"European Robin","sciName":"Erithacus rubecula","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":1,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"mallar3","comName":"Mallard","sciName":"Anas platyrhynchos","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":8,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"mewgul","comName":"Common Gull","sciName":"Larus canus","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":10,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"reebun","comName":"Reed Bunting","sciName":"Emberiza schoeniclus","locId":"L28737763","locName":"5A - Zhagalau","obsDt":"2025-02-10 11:00","howMany":5,"lat":43.6387121,"lng":51.1524502,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212769417"},{"speciesCode":"misthr1","comName":"Mistle Thrush","sciName":"Turdus viscivorus","locId":"L39682659","locName":"Улица Абылайхана, Докучаевка, Костанайская область, KZ (51,658, 64,227)","obsDt":"2025-02-10 10:49","howMany":1,"lat":51.6578517,"lng":64.2267683,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212719437"},{"speciesCode":"bohwax","comName":"Bohemian Waxwing","sciName":"Bombycilla garrulus","locId":"L39682659","locName":"Улица Абылайхана, Докучаевка, Костанайская область, KZ (51,658, 64,227)","obsDt":"2025-02-10 10:49","howMany":3,"lat":51.6578517,"lng":64.2267683,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212719437"},{"speciesCode":"comcha","comName":"Common Chaffinch","sciName":"Fringilla coelebs","locId":"L39682659","locName":"Улица Абылайхана, Докучаевка, Костанайская область, KZ (51,658, 64,227)","obsDt":"2025-02-10 10:49","howMany":3,"lat":51.6578517,"lng":64.2267683,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212719437"},{"speciesCode":"eurjac","comName":"Eurasian Jackdaw","sciName":"Coloeus monedula","locId":"L36987944","locName":"Karamendy, N.Sagadieva street","obsDt":"2025-02-09 16:49","howMany":190,"lat":51.6483017,"lng":64.2282049,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212581302"},{"speciesCode":"eurspa1","comName":"Eurasian Sparrowhawk","sciName":"Accipiter nisus","locId":"L36987944","locName":"Karamendy, N.Sagadieva street","obsDt":"2025-02-09 16:49","howMany":1,"lat":51.6483017,"lng":64.2282049,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212581302"},{"speciesCode":"hawfin","comName":"Hawfinch","sciName":"Coccothraustes coccothraustes","locId":"L36987944","locName":"Karamendy, N.Sagadieva street","obsDt":"2025-02-09 16:49","howMany":1,"lat":51.6483017,"lng":64.2282049,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212581302"},{"speciesCode":"eurgol","comName":"European Goldfinch","sciName":"Carduelis carduelis","locId":"L36987944","locName":"Karamendy, N.Sagadieva street","obsDt":"2025-02-09 11:20","howMany":12,"lat":51.6483017,"lng":64.2282049,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212544813"},{"speciesCode":"whwgro1","comName":"White-winged Grosbeak","sciName":"Mycerobas carnipes","locId":"L3128463","locName":"Almaty--Republic Square","obsDt":"2025-02-09 09:50","howMany":15,"lat":43.2369884,"lng":76.9456673,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212633799"},{"speciesCode":"commyn","comName":"Common Myna","sciName":"Acridotheres tristis","locId":"L3128463","locName":"Almaty--Republic Square","obsDt":"2025-02-09 09:50","lat":43.2369884,"lng":76.9456673,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212633799"},{"speciesCode":"carcro1","comName":"Carrion Crow","sciName":"Corvus corone","locId":"L3128463","locName":"Almaty--Republic Square","obsDt":"2025-02-09 09:50","lat":43.2369884,"lng":76.9456673,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212633799"},{"speciesCode":"eursis","comName":"Eurasian Siskin","sciName":"Spinus spinus","locId":"L3128463","locName":"Almaty--Republic Square","obsDt":"2025-02-09 09:50","howMany":4,"lat":43.2369884,"lng":76.9456673,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212633799"},{"speciesCode":"fifser1","comName":"Fire-fronted Serin","sciName":"Serinus pusillus","locId":"L3128463","locName":"Almaty--Republic Square","obsDt":"2025-02-09 09:50","howMany":15,"lat":43.2369884,"lng":76.9456673,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212633799"},{"speciesCode":"rook1","comName":"Rook","sciName":"Corvus frugilegus","locId":"L3128463","locName":"Almaty--Republic Square","obsDt":"2025-02-09 09:50","lat":43.2369884,"lng":76.9456673,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212633799"},{"speciesCode":"pygcor2","comName":"Pygmy Cormorant","sciName":"Microcarbo pygmaeus","locId":"L13247837","locName":"Сайран көлі (Sayran Reservoir)","obsDt":"2025-02-08 11:15","howMany":1,"lat":43.2429993,"lng":76.8652404,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212440082"},{"speciesCode":"goldcr1","comName":"Goldcrest","sciName":"Regulus regulus","locId":"L13247837","locName":"Сайран көлі (Sayran Reservoir)","obsDt":"2025-02-08 11:15","howMany":2,"lat":43.2429993,"lng":76.8652404,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212440082"},{"speciesCode":"tufduc","comName":"Tufted Duck","sciName":"Aythya fuligula","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"wemhar1","comName":"Western Marsh Harrier","sciName":"Circus aeruginosus","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","howMany":2,"lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"eurwig","comName":"Eurasian Wigeon","sciName":"Mareca penelope","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"eurcoo","comName":"Eurasian Coot","sciName":"Fulica atra","locId":"L28430814","locName":"Kana
+[info] l na Karakol","obsDt":"2025-02-08 10:00","howMany":50,"lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"dalpel1","comName":"Dalmatian Pelican","sciName":"Pelecanus crispus","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","howMany":20,"lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"comsni","comName":"Common Snipe","sciName":"Gallinago gallinago","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","howMany":8,"lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"mutswa","comName":"Mute Swan","sciName":"Cygnus olor","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"gnwtea","comName":"Green-winged Teal","sciName":"Anas crecca","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","howMany":40,"lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"norsho","comName":"Northern Shoveler","sciName":"Spatula clypeata","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"rebmer","comName":"Red-breasted Merganser","sciName":"Mergus serrator","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"comgol","comName":"Common Goldeneye","sciName":"Bucephala clangula","locId":"L28430814","locName":"Kanal na Karakol","obsDt":"2025-02-08 10:00","lat":43.5939952,"lng":51.2763148,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212452264"},{"speciesCode":"goleag","comName":"Golden Eagle","sciName":"Aquila chrysaetos","locId":"L10200253","locName":"Altyn Emel NP--General Area","obsDt":"2025-02-07 14:11","howMany":2,"lat":44.0020618,"lng":78.8381692,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212329390"},{"speciesCode":"chukar","comName":"Chukar","sciName":"Alectoris chukar","locId":"L10200253","locName":"Altyn Emel NP--General Area","obsDt":"2025-02-07 14:11","howMany":1,"lat":44.0020618,"lng":78.8381692,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212329390"},{"speciesCode":"rinphe1","comName":"Ring-necked Pheasant","sciName":"Phasianus colchicus","locId":"L40027176","locName":"Sunkar International Ski Jumping Complex","obsDt":"2025-02-07 12:40","lat":43.2100767,"lng":76.93305,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S212265441"},{"speciesCode":"monfin2","comName":"Mongolian Finch","sciName":"Bucanetes mongolicus","locId":"L10200253","locName":"Altyn Emel NP--General Area","obsDt":"2025-02-07 12:23","howMany":50,"lat":44.0020618,"lng":78.8381692,"obsValid":true,"obsReviewed":true,"locationPrivate":false,"subId":"S212329062"},{"speciesCode":"lolbuz1","comName":"Long-legged Buzzard","sciName":"Buteo rufinus","locId":"L10200253","locName":"Altyn Emel NP--General Area","obsDt":"2025-02-07 12:23","howMany":1,"lat":44.0020618,"lng":78.8381692,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212329062"},{"speciesCode":"norhar1","comName":"Hen Harrier","sciName":"Circus cyaneus","locId":"L10200253","locName":"Altyn Emel NP--General Area","obsDt":"2025-02-07 07:30","howMany":2,"lat":44.0020618,"lng":78.8381692,"obsValid":true,"obsReviewed":false,"locationPrivate":false,"subId":"S212328767"},{"speciesCode":"cinvul1","comName":"Cinereous Vulture","sciName":"Aegypius monachus","locId":"L10200253","locName":"Altyn Emel NP--General Area","obsDt":"2025-02-07 07:30","howMany":5,"lat":44.0020618,"lng":78.8381692,"obsValid":true,"obsReviewed":true,"locationPrivate":false,"subId":"S212328767"},{"speciesCode":"gadwal","comName":"Gadwall","sciName":"Mareca strepera","locId":"L21497306","locName":"15 mkr. zhagalau","obsDt":"2025-02-06 10:00","howMany":1,"lat":43.6657558,"lng":51.1316105,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S212450470"},{"speciesCode":"grswoo","comName":"Great Spotted Woodpecker","sciName":"Dendrocopos major","locId":"L36987944","locName":"Karamendy, N.Sagadieva street","obsDt":"2025-02-03 11:52","howMany":1,"lat":51.6483017,"lng":64.2282049,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S211788398"},{"speciesCode":"ribgul","comName":"Ring-billed Gull","sciName":"Larus delawarensis","locId":"L18149722","locName":"Aktau--Rock Beach №2","obsDt":"2025-02-02 11:13","howMany":1,"lat":43.6658079,"lng":51.1314973,"obsValid":true,"obsReviewed":true,"locationPrivate":false,"subId":"S211606830"},{"speciesCode":"houspa","comName":"House Sparrow","sciName":"Passer domesticus","locId":"L39749722","locName":"82 улица Сабита Муканова, Петропавловск, Северо-Казахстанская область, KZ (54,859, 69,135)\nС Работы Через Парк","obsDt":"2025-02-02 10:53","howMany":12,"lat":54.8591931,"lng":69.1351011,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211619690"},{"speciesCode":"horlar","comName":"Horned Lark","sciName":"Eremophila alpestris","locId":"L27506645","locName":"Улица Абылайхана, Докучаевка, Костанайская область, KZ (51,65, 64,227)","obsDt":"2025-02-01 17:20","howMany":5,"lat":51.649505,"lng":64.22704,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211462107"},{"speciesCode":"blakit1","comName":"Black Kite","sciName":"Milvus migrans","locId":"L30200189","locName":"Bayandy","obsDt":"2025-02-01 11:45","howMany":25,"lat":43.754353,"lng":51.2632871,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S211703230"},{"speciesCode":"eursta","comName":"European Starling","sciName":"Sturnus vulgaris","locId":"L30200189","locName":"Bayandy","obsDt":"2025-02-01 11:45","howMany":500,"lat":43.754353,"lng":51.2632871,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S211703230"},{"speciesCode":"watrai1","comName":"Water Rail","sciName":"Rallus aquaticus","locId":"L28497141","locName":"Kanal - 1","obsDt":"2025-02-01 10:30","howMany":1,"lat":43.5976795,"lng":51.2793581,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S211702446"},{"speciesCode":"litegr","comName":"Little Egret","sciName":"Egretta garzetta","locId":"L28497141","locName":"Kanal - 1","obsDt":"2025-02-01 10:30","howMany":1,"lat":43.5976795,"lng":51.2793581,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S211702446"},{"speciesCode":"wbtwar1","comName":"White-browed Tit-Warbler","sciName":"Leptopoecile sophiae","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01 08:19","howMany":2,"lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211442255"},{"speciesCode":"eurgre1","comName":"European Greenfinch","sciName":"Chloris chloris","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01 08:19","lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211442255"},{"speciesCode":"lotros1","comName":"Long-tailed Rosefinch","sciName":"Carpodacus sibiricus","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01 08:19","lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211442255"},{"speciesCode":"norgos1","comName":"Eurasian Goshawk","sciName":"Astur gentilis","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01
+[info]  08:19","howMany":1,"lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211442255"},{"speciesCode":"perfal","comName":"Peregrine Falcon","sciName":"Falco peregrinus","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01 08:19","howMany":1,"lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211442255"},{"speciesCode":"remros1","comName":"Red-mantled Rosefinch","sciName":"Carpodacus rhodochlamys","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01 08:19","lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211442255"},{"speciesCode":"rubred2","comName":"Rufous-backed Redstart","sciName":"Phoenicurus erythronotus","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01 08:19","lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":false,"locationPrivate":true,"subId":"S211442255"},{"speciesCode":"stodov1","comName":"Stock Dove","sciName":"Columba oenas","locId":"L39860841","locName":"Ават, Алматинская область, KZ (43,409, 77,251)","obsDt":"2025-02-01 08:19","lat":43.4090872,"lng":77.2513452,"obsValid":true,"obsReviewed":true,"locationPrivate":true,"subId":"S211442255"}]
+
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:13.155Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:13.155Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:13.155Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-02-14T16:50:13.155Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:13.659Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com 200
+[debug] [2025-02-14T16:50:13.659Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2025-02-14T16:50:13.659Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-14T16:50:13.660Z] > authorizing via signed-in user (gavinwaynebrown@gmail.com)
+[debug] [2025-02-14T16:50:13.660Z] [iam] checking project fnof-gavin for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-02-14T16:50:13.660Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:13.660Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:13.660Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions [none]
+[debug] [2025-02-14T16:50:13.660Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:13.660Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-02-14T16:50:13.773Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions 200
+[debug] [2025-02-14T16:50:13.773Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-02-14T16:50:13.774Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:13.774Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:13.774Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/fnof-gavin/instances pageSize=100&pageToken=
+[debug] [2025-02-14T16:50:14.173Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/fnof-gavin/instances 200
+[debug] [2025-02-14T16:50:14.173Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/fnof-gavin/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/gavinbrown/Documents/WebApp/functions (62.36 KB) for uploading 
+[debug] [2025-02-14T16:50:14.224Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:14.225Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:14.225Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/fnof-gavin/locations/-/functions [none]
+[debug] [2025-02-14T16:50:14.834Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/fnof-gavin/locations/-/functions 200
+[debug] [2025-02-14T16:50:14.834Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/fnof-gavin/locations/-/functions {}
+[debug] [2025-02-14T16:50:14.835Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:14.835Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:14.835Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-02-14T16:50:15.273Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/-/functions 200
+[debug] [2025-02-14T16:50:15.274Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/-/functions {"functions":[{"name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"build":"projects/1072546484082/locations/us-central1/builds/9d42bcf0-60ed-48b9-bbdc-36d4d82f7a5e","runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551649488256"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/fnof-gavin/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551649488256"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/fnof-gavin/serviceAccounts/1072546484082-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/fnof-gavin/locations/us-central1/services/scheduledrun","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://scheduledrun-5zy5vfntsq-uc.a.run.app","serviceAccountEmail":"1072546484082-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scheduledrun-00004-fog","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-02-14T16:48:15.346488922Z","labels":{"firebase-functions-hash":"fb5213200aa557b61f486f7b1578cd75e72f5ba5","deployment-tool":"cli-firebase","deployment-scheduled":"true"},"environment":"GEN_2","url":"https://us-central1-fnof-gavin.cloudfunctions.net/scheduledRun","createTime":"2025-02-14T16:25:46.998861776Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API cloudscheduler.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:15.278Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:15.278Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:15.278Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com [none]
+[debug] [2025-02-14T16:50:15.278Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:15.721Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com 200
+[debug] [2025-02-14T16:50:15.721Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com [omitted]
+[info] ✔  functions: required API cloudscheduler.googleapis.com is enabled 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:15.722Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:15.722Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:15.722Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:15.722Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:15.723Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:15.723Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2025-02-14T16:50:15.723Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:15.723Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:15.723Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/run.googleapis.com [none]
+[debug] [2025-02-14T16:50:15.723Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/run.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:15.723Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/eventarc.googleapis.com [none]
+[debug] [2025-02-14T16:50:15.723Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/eventarc.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:15.725Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com [none]
+[debug] [2025-02-14T16:50:15.725Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:15.728Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/storage.googleapis.com [none]
+[debug] [2025-02-14T16:50:15.729Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/storage.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:50:15.994Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/run.googleapis.com 200
+[debug] [2025-02-14T16:50:15.994Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2025-02-14T16:50:16.062Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/storage.googleapis.com 200
+[debug] [2025-02-14T16:50:16.063Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2025-02-14T16:50:16.116Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/eventarc.googleapis.com 200
+[debug] [2025-02-14T16:50:16.116Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2025-02-14T16:50:16.240Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com 200
+[debug] [2025-02-14T16:50:16.240Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-02-14T16:50:16.240Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.240Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-02-14T16:50:16.241Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.241Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.241Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1072546484082/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-02-14T16:50:16.241Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1072546484082/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-02-14T16:50:16.434Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1072546484082/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-02-14T16:50:16.434Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1072546484082/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1072546484082@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"115434653477890839740"}}
+[debug] [2025-02-14T16:50:16.532Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1072546484082/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-02-14T16:50:16.533Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1072546484082/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1072546484082@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"107562764133269393502"}}
+[debug] [2025-02-14T16:50:16.536Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.536Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.536Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin [none]
+[debug] [2025-02-14T16:50:16.630Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin 200
+[debug] [2025-02-14T16:50:16.631Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin {"projectNumber":"1072546484082","projectId":"fnof-gavin","lifecycleState":"ACTIVE","name":"FNoF-Gavin","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-01-27T16:28:24.202641Z"}
+[debug] [2025-02-14T16:50:16.632Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.633Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.633Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/fnof-gavin/billingInfo [none]
+[debug] [2025-02-14T16:50:16.779Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/fnof-gavin/billingInfo 200
+[debug] [2025-02-14T16:50:16.780Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/fnof-gavin/billingInfo {"name":"projects/fnof-gavin/billingInfo","projectId":"fnof-gavin","billingAccountName":"billingAccounts/018401-6E09B0-DFB4A1","billingEnabled":true}
+[debug] [2025-02-14T16:50:16.782Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.782Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:16.782Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-02-14T16:50:17.140Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-02-14T16:50:17.140Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-1072546484082.us-central1.cloudfunctions.appspot.com/507a6479-5a85-4438-921d-9e2a585418fb.zip?GoogleAccessId=service-1072546484082@gcf-admin-robot.iam.gserviceaccount.com&Expires=1739553617&Signature=pkO53jxNCupNCIrCvMwPcj22AQlbQTRIQzuCl4uhBBM8cxSQuJFJWiBc6p%2FyVpWFpj8Xw98eQCMfOzs22xRO9QQo3x7GfsyfgqAXEy5y15faH6KZapk53prQ%2BDQxBQUmsPt%2B1bx5Ecna4fDZkKHwdpvF2zzXdDptuXHmdOB%2FSfN8Yef2VKaYercP3RGud34mezUcXHfLycrkfHrIkuWCgi8f58tofZLH9%2FGkZ0nlD9xu6q9pfHyXmJ%2F8auex8uPj%2FSkc6BaxC9Z4RIBL7ryL7Lg1OnTyjPnYXHswqPElW%2BucaORmD6uFLa3JmQ%2FQExi1qCwQmhjHJykdPRKH79lijQ%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-1072546484082.us-central1.cloudfunctions.appspot.com","object":"507a6479-5a85-4438-921d-9e2a585418fb.zip"}}
+[debug] [2025-02-14T16:50:17.141Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-1072546484082.us-central1.cloudfunctions.appspot.com/507a6479-5a85-4438-921d-9e2a585418fb.zip GoogleAccessId=service-1072546484082%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1739553617&Signature=pkO53jxNCupNCIrCvMwPcj22AQlbQTRIQzuCl4uhBBM8cxSQuJFJWiBc6p%2FyVpWFpj8Xw98eQCMfOzs22xRO9QQo3x7GfsyfgqAXEy5y15faH6KZapk53prQ%2BDQxBQUmsPt%2B1bx5Ecna4fDZkKHwdpvF2zzXdDptuXHmdOB%2FSfN8Yef2VKaYercP3RGud34mezUcXHfLycrkfHrIkuWCgi8f58tofZLH9%2FGkZ0nlD9xu6q9pfHyXmJ%2F8auex8uPj%2FSkc6BaxC9Z4RIBL7ryL7Lg1OnTyjPnYXHswqPElW%2BucaORmD6uFLa3JmQ%2FQExi1qCwQmhjHJykdPRKH79lijQ%3D%3D
+[debug] [2025-02-14T16:50:17.141Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1072546484082.us-central1.cloudfunctions.appspot.com/507a6479-5a85-4438-921d-9e2a585418fb.zip [stream]
+[debug] [2025-02-14T16:50:17.404Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-1072546484082.us-central1.cloudfunctions.appspot.com/507a6479-5a85-4438-921d-9e2a585418fb.zip 200
+[debug] [2025-02-14T16:50:17.404Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1072546484082.us-central1.cloudfunctions.appspot.com/507a6479-5a85-4438-921d-9e2a585418fb.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: updating Node.js 22 (2nd Gen) function scheduledRun(us-central1)... 
+[debug] [2025-02-14T16:50:17.410Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:17.410Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:17.410Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/functions/scheduledRun updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-02-14T16:50:17.410Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/functions/scheduledRun {"name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-uploads-1072546484082.us-central1.cloudfunctions.appspot.com","object":"507a6479-5a85-4438-921d-9e2a585418fb.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"b9ebe132e9a227f65554137c98593e9e4020c62a"}}
+[debug] [2025-02-14T16:50:18.573Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/functions/scheduledRun 200
+[debug] [2025-02-14T16:50:18.573Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/functions/scheduledRun {"name":"projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-02-14T16:50:18.495478800Z","target":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","verb":"update","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2025-02-14T16:50:18.574Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:18.574Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:18.574Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d [none]
+[debug] [2025-02-14T16:50:18.862Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d 200
+[debug] [2025-02-14T16:50:18.862Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d {"name":"projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-02-14T16:50:18.495478800Z","target":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551818443933"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/fnof-gavin/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551649488256"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/fnof-gavin/serviceAccounts/1072546484082-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/fnof-gavin/locations/us-central1/services/scheduledrun","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scheduledrun-5zy5vfntsq-uc.a.run.app","serviceAccountEmail":"1072546484082-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scheduledrun-00004-fog","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"b9ebe132e9a227f65554137c98593e9e4020c62a"},"environment":"GEN_2","url":"https://us-central1-fnof-gavin.cloudfunctions.net/scheduledRun","satisfiesPzi":true},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":false}
+[debug] [2025-02-14T16:50:19.363Z] [update-default-us-central1-scheduledRun] Retrying task index 0
+[debug] [2025-02-14T16:50:19.364Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:19.364Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:19.364Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d [none]
+[debug] [2025-02-14T16:50:19.690Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d 200
+[debug] [2025-02-14T16:50:19.690Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d {"name":"projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-02-14T16:50:18.495478800Z","target":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551818443933"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/fnof-gavin/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551649488256"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/fnof-gavin/serviceAccounts/1072546484082-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/fnof-gavin/locations/us-central1/services/scheduledrun","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scheduledrun-5zy5vfntsq-uc.a.run.app","serviceAccountEmail":"1072546484082-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scheduledrun-00004-fog","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"b9ebe132e9a227f65554137c98593e9e4020c62a"},"environment":"GEN_2","url":"https://us-central1-fnof-gavin.cloudfunctions.net/scheduledRun","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/aa27ec7e-5599-4ec0-b048-1a67b3ae4250?project=1072546484082"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250"},"done":false}
+[debug] [2025-02-14T16:50:20.692Z] [update-default-us-central1-scheduledRun] Retrying task index 0
+[debug] [2025-02-14T16:50:20.692Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:20.692Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:20.692Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d [none]
+[debug] [2025-02-14T16:50:20.776Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d 200
+[debug] [2025-02-14T16:50:20.776Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d {"name":"projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-02-14T16:50:18.495478800Z","target":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551818443933"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/fnof-gavin/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551649488256"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/fnof-gavin/serviceAccounts/1072546484082-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/fnof-gavin/locations/us-central1/services/scheduledrun","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scheduledrun-5zy5vfntsq-uc.a.run.app","serviceAccountEmail":"1072546484082-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scheduledrun-00004-fog","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"b9ebe132e9a227f65554137c98593e9e4020c62a"},"environment":"GEN_2","url":"https://us-central1-fnof-gavin.cloudfunctions.net/scheduledRun","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/aa27ec7e-5599-4ec0-b048-1a67b3ae4250?project=1072546484082"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250"},"done":false}
+[debug] [2025-02-14T16:50:22.887Z] [update-default-us-central1-scheduledRun] Retrying task index 0
+[debug] [2025-02-14T16:50:22.888Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:22.889Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:22.889Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d [none]
+[debug] [2025-02-14T16:50:23.187Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d 200
+[debug] [2025-02-14T16:50:23.187Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d {"name":"projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-02-14T16:50:18.495478800Z","target":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551818443933"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/fnof-gavin/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551649488256"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/fnof-gavin/serviceAccounts/1072546484082-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/fnof-gavin/locations/us-central1/services/scheduledrun","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scheduledrun-5zy5vfntsq-uc.a.run.app","serviceAccountEmail":"1072546484082-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scheduledrun-00004-fog","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"b9ebe132e9a227f65554137c98593e9e4020c62a"},"environment":"GEN_2","url":"https://us-central1-fnof-gavin.cloudfunctions.net/scheduledRun","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/aa27ec7e-5599-4ec0-b048-1a67b3ae4250?project=1072546484082"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250"},"done":false}
+[debug] [2025-02-14T16:50:27.189Z] [update-default-us-central1-scheduledRun] Retrying task index 0
+[debug] [2025-02-14T16:50:27.189Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:27.189Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:50:27.189Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d [none]
+[debug] [2025-02-14T16:50:27.313Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d 200
+[debug] [2025-02-14T16:50:27.313Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d {"name":"projects/fnof-gavin/locations/us-central1/operations/operation-1739551817736-62e1cf82a1f8b-b603021c-0b7df08d","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-02-14T16:50:18.495478800Z","target":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551818443933"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/fnof-gavin/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551649488256"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/fnof-gavin/serviceAccounts/1072546484082-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/fnof-gavin/locations/us-central1/services/scheduledrun","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scheduledrun-5zy5vfntsq-uc.a.run.app","serviceAccountEmail":"1072546484082-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scheduledrun-00004-fog","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"b9ebe132e9a227f65554137c98593e9e4020c62a"},"environment":"GEN_2","url":"https://us-central1-fnof-gavin.cloudfunctions.net/scheduledRun","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/aa27ec7e-5599-4ec0-b048-1a67b3ae4250?project=1072546484082"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250"},"done":false}
+[debug] [2025-02-14T16:51:07.587Z] ----------------------------------------------------------------------
+[debug] [2025-02-14T16:51:07.591Z] Command:       /usr/local/bin/node /Users/gavinbrown/.npm-global/bin/firebase deploy --only functions
+[debug] [2025-02-14T16:51:07.591Z] CLI Version:   13.30.0
+[debug] [2025-02-14T16:51:07.592Z] Platform:      darwin
+[debug] [2025-02-14T16:51:07.592Z] Node Version:  v22.13.1
+[debug] [2025-02-14T16:51:07.592Z] Time:          Fri Feb 14 2025 09:51:07 GMT-0700 (Mountain Standard Time)
+[debug] [2025-02-14T16:51:07.592Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-14T16:51:07.839Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-14T16:51:07.840Z] > authorizing via signed-in user (gavinwaynebrown@gmail.com)
+[debug] [2025-02-14T16:51:07.840Z] [iam] checking project fnof-gavin for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-02-14T16:51:07.842Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:07.842Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:07.846Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions [none]
+[debug] [2025-02-14T16:51:07.846Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:07.846Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-02-14T16:51:08.111Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions 200
+[debug] [2025-02-14T16:51:08.111Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-02-14T16:51:08.112Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.112Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.112Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-02-14T16:51:08.112Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-02-14T16:51:08.344Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-02-14T16:51:08.344Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/fnof-gavin/serviceAccounts/fnof-gavin@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'fnof-gavin'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-02-14T16:51:08.348Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.348Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.348Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin [none]
+[debug] [2025-02-14T16:51:08.454Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin 200
+[debug] [2025-02-14T16:51:08.454Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin {"projectNumber":"1072546484082","projectId":"fnof-gavin","lifecycleState":"ACTIVE","name":"FNoF-Gavin","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-01-27T16:28:24.202641Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:08.456Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.456Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.457Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.457Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:08.457Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.457Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:08.457Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.457Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.458Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-02-14T16:51:08.458Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:08.459Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-02-14T16:51:08.459Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:08.461Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com [none]
+[debug] [2025-02-14T16:51:08.461Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:08.463Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com [none]
+[debug] [2025-02-14T16:51:08.464Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:08.699Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com 200
+[debug] [2025-02-14T16:51:08.699Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-02-14T16:51:08.853Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com 200
+[debug] [2025-02-14T16:51:08.853Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-02-14T16:51:08.878Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com 200
+[debug] [2025-02-14T16:51:08.878Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-02-14T16:51:08.922Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com 200
+[debug] [2025-02-14T16:51:08.922Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-02-14T16:51:08.922Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.922Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:08.922Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fnof-gavin/adminSdkConfig [none]
+[debug] [2025-02-14T16:51:09.364Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fnof-gavin/adminSdkConfig 200
+[debug] [2025-02-14T16:51:09.364Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fnof-gavin/adminSdkConfig {"projectId":"fnof-gavin","storageBucket":"fnof-gavin.firebasestorage.app"}
+[debug] [2025-02-14T16:51:09.365Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:09.365Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:09.365Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fnof-gavin/configs [none]
+[debug] [2025-02-14T16:51:09.536Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fnof-gavin/configs 200
+[debug] [2025-02-14T16:51:09.536Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fnof-gavin/configs {}
+[debug] [2025-02-14T16:51:09.538Z] Validating nodejs source
+[debug] [2025-02-14T16:51:10.378Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.3.2"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-02-14T16:51:10.379Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-02-14T16:51:10.380Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-02-14T16:51:10.390Z] Found firebase-functions binary at '/Users/gavinbrown/Documents/WebApp/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8292
+
+[debug] [2025-02-14T16:51:10.974Z] Got response from /__/functions.yaml {"endpoints":{"scheduledRun":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"scheduleTrigger":{"schedule":"every day 20:00","retryConfig":{"retryCount":null,"maxDoublings":null,"maxRetrySeconds":null,"minBackoffSeconds":null,"maxBackoffSeconds":null},"timeZone":null},"entryPoint":"scheduledRun"}},"specVersion":"v1alpha1","requiredAPIs":[{"api":"cloudscheduler.googleapis.com","reason":"Needed for scheduled functions."}],"extensions":{}}
+[info] AxiosError: Request failed with status code 403
+    at settle (/Users/gavinbrown/Documents/WebApp/functions/node_modules/axios/dist/node/axios.cjs:2026:12)
+    at IncomingMessage.handleStreamEnd (/Users/gavinbrown/Documents/WebApp/functions/node_modules/axios/dist/node/axios.cjs:3142:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (/Users/gavinbrown/Documents/WebApp/functions/node_modules/axios/dist/node/axios.cjs:4252:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: Infinity,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'X-eBirdApiToken': undefined,
+      'User-Agent': 'axios/1.7.9',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://api.ebird.org/v2/data/obs/KZ/recent',
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /v2/data/obs/KZ/recent HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.7.9\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.ebird.org\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/v2/data/obs/KZ/recent',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.ebird.org/v2/data/obs/KZ/recent',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.ebird.org',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.ebird.org/v2/data/obs/KZ/recent',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.ebird.org',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.ebird.org',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 806,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 58,
+        [Symbol(triggerId)]: 56,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      '
+[info] cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      'content-length': '0',
+      date: 'Fri, 14 Feb 2025 16:51:10 GMT',
+      expires: '0',
+      pragma: 'no-cache',
+      'strict-transport-security': 'max-age=31536000 ; includeSubDomains',
+      vary: 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'DENY',
+      'x-xss-protection': '1; mode=block'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: Infinity,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'get',
+      url: 'https://api.ebird.org/v2/data/obs/KZ/recent',
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /v2/data/obs/KZ/recent HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.7.9\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.ebird.org\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/v2/data/obs/KZ/recent',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.ebird.org',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: ''
+  },
+  status: 403
+}
+
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:15.014Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:15.014Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:15.014Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-02-14T16:51:15.014Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:15.713Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com 200
+[debug] [2025-02-14T16:51:15.714Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2025-02-14T16:51:15.715Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-14T16:51:15.715Z] > authorizing via signed-in user (gavinwaynebrown@gmail.com)
+[debug] [2025-02-14T16:51:15.715Z] [iam] checking project fnof-gavin for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-02-14T16:51:15.715Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:15.716Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:15.716Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions [none]
+[debug] [2025-02-14T16:51:15.716Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:15.716Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-02-14T16:51:15.824Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions 200
+[debug] [2025-02-14T16:51:15.824Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fnof-gavin:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-02-14T16:51:15.825Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:15.825Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:15.825Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/fnof-gavin/instances pageSize=100&pageToken=
+[debug] [2025-02-14T16:51:16.225Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/fnof-gavin/instances 200
+[debug] [2025-02-14T16:51:16.226Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/fnof-gavin/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/gavinbrown/Documents/WebApp/functions (62.38 KB) for uploading 
+[debug] [2025-02-14T16:51:16.287Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:16.287Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:16.287Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/fnof-gavin/locations/-/functions [none]
+[debug] [2025-02-14T16:51:16.817Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/fnof-gavin/locations/-/functions 200
+[debug] [2025-02-14T16:51:16.817Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/fnof-gavin/locations/-/functions {}
+[debug] [2025-02-14T16:51:16.818Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:16.818Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:16.818Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-02-14T16:51:17.407Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/-/functions 200
+[debug] [2025-02-14T16:51:17.407Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fnof-gavin/locations/-/functions {"functions":[{"name":"projects/fnof-gavin/locations/us-central1/functions/scheduledRun","buildConfig":{"build":"projects/1072546484082/locations/us-central1/builds/aa27ec7e-5599-4ec0-b048-1a67b3ae4250","runtime":"nodejs22","entryPoint":"scheduledRun","source":{"storageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551818443933"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/fnof-gavin/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1072546484082-us-central1","object":"scheduledRun/function-source.zip","generation":"1739551818443933"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/fnof-gavin/serviceAccounts/1072546484082-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/fnof-gavin/locations/us-central1/services/scheduledrun","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"fnof-gavin\",\"storageBucket\":\"fnof-gavin.firebasestorage.app\"}","GCLOUD_PROJECT":"fnof-gavin","EVENTARC_CLOUD_EVENT_SOURCE":"projects/fnof-gavin/locations/us-central1/services/scheduledRun","FUNCTION_TARGET":"scheduledRun","LOG_EXECUTION_ID":"true"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://scheduledrun-5zy5vfntsq-uc.a.run.app","serviceAccountEmail":"1072546484082-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scheduledrun-00005-xoh","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-02-14T16:51:01.616941869Z","labels":{"deployment-scheduled":"true","firebase-functions-hash":"b9ebe132e9a227f65554137c98593e9e4020c62a","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-fnof-gavin.cloudfunctions.net/scheduledRun","createTime":"2025-02-14T16:25:46.998861776Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API cloudscheduler.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:17.411Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:17.411Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:17.411Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com [none]
+[debug] [2025-02-14T16:51:17.411Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:17.864Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com 200
+[debug] [2025-02-14T16:51:17.864Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/cloudscheduler.googleapis.com [omitted]
+[info] ✔  functions: required API cloudscheduler.googleapis.com is enabled 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:17.865Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:17.865Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:17.865Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:17.865Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:17.865Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:17.865Z] Checked if tokens are valid: true, expires at: 1739552798194
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2025-02-14T16:51:17.866Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:17.866Z] Checked if tokens are valid: true, expires at: 1739552798194
+[debug] [2025-02-14T16:51:17.866Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/run.googleapis.com [none]
+[debug] [2025-02-14T16:51:17.866Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/run.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:17.866Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/eventarc.googleapis.com [none]
+[debug] [2025-02-14T16:51:17.866Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/eventarc.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:17.868Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com [none]
+[debug] [2025-02-14T16:51:17.868Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:17.871Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/storage.googleapis.com [none]
+[debug] [2025-02-14T16:51:17.871Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/storage.googleapis.com x-goog-quota-user=projects/fnof-gavin
+[debug] [2025-02-14T16:51:18.170Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com 200
+[debug] [2025-02-14T16:51:18.171Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fnof-gavin/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
